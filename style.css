@@ -1,0 +1,126 @@
+@font-face {
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/polar.otf");
+  font-family: 'Polar';
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #000;
+}
+
+.slider-container {
+  position: relative;
+  height: 100%;
+}
+
+.slider {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+.slider.animating {
+  transition: transform .5s;
+  will-change: transform;
+}
+.slider.animating .slide__bg {
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide.active .slide__text {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.slide__bg {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  /* background-position: center;
+  background-repeat: no-repeat; */
+  opacity: 1;
+}
+
+.slide:nth-child(1) {
+  left: 0;
+}
+.slide:nth-child(1) .slide__bg {
+  left: 0;
+  background-image: url("bienvenida.png");
+  background-size: cover;
+}
+
+
+.slide:nth-child(2) {
+  left: 100%;
+}
+.slide:nth-child(2) .slide__bg {
+  left: 100%;
+  background-image: url("bg-bienvenida.png");
+  background-size: cover;
+}
+.slide:nth-child(2) .slide__text {
+  background-color: rgba(214, 108, 247, 0.8);
+}
+
+.slide:nth-child(3) {
+  left: 200%;
+}
+.slide:nth-child(3) .slide__bg {
+  left: 200%;
+  background-image: url("bg-evento.png");
+}
+.slide:nth-child(3) .slide__text {
+  background-color: rgba(214, 108, 247, 0.8);
+}
+
+.slide:nth-child(4) {
+  left: 300%;
+}
+.slide:nth-child(4) .slide__bg {
+  left: 300%;
+  background-image: url("bg-convocatoria.png");
+}
+.slide:nth-child(4) .slide__text {
+  background-color: rgba(214, 108, 247, 0.8);
+}
+
+.slide:nth-child(5) {
+  left: 400%;
+}
+.slide:nth-child(5) .slide__bg {
+  left: 400%;
+  background-image: url("bg-contacto.png");
+}
+.slide:nth-child(5) .slide__text {
+  background-color: rgba(214, 108, 247, 0.8);
+}
+
+.slide__text {
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-150%);
+  transition: transform 1.5s 0.5s, opacity 0.5s 0.5s;
+  padding: 10rem;
+}
