@@ -26,10 +26,8 @@ header {
   display: flex;
   justify-content:center;
   align-items: center;
-  padding: 1%;
-  background: rgb(49,39,66);
-  background: linear-gradient(90deg, rgba(49,39,66,1) 0%, rgba(54,31,80,1) 20%, rgba(62,13,104,1) 56%, rgba(52,9,90,1) 83%, rgba(37,25,68,1) 100%);
-
+  padding: 0;
+  background: rgb(0, 0, 0);
   font-size: 2rem;
   font-family: 'Suez One', serif;
 }
@@ -46,11 +44,15 @@ header {
 .nav__links li a{
   transition: all 0.3s ease 0s;
   text-decoration: none;
-  color: rgb(80, 90, 240);
+  color: rgb(248, 248, 248);
 }
 
 .nav__links li a:hover{
-  color: rgb(216, 217, 218);
+  color: rgb(91, 163, 235);
+}
+
+.logo__link {
+  color: rgba(247, 51, 51, 0.884) !important;
 }
 
 /* --------------------------------------- */
@@ -88,15 +90,15 @@ header {
 }
 .slide__bg {
   position: absolute;
-  top: 0;
+  top: -30px;
   left: 0%;
   width: 100%;
   height: 100%;
   background-size:cover;
-  /* background-position: center;
-  background-repeat: no-repeat; */
   opacity: 1;
 }
+
+/* 1--------------------------------------- */
 
 .slide:nth-child(1) {
   left: 0;
@@ -104,9 +106,10 @@ header {
 .slide:nth-child(1) .slide__bg {
   left: 0;
   background-image: url("bg-bienvenida.png");
-  background-size: cover;
+  background-size:contain;
 }
 
+/* 2----------------- */
 
 .slide:nth-child(2) {
   left: 100%;
@@ -115,10 +118,16 @@ header {
   left: 100%;
   background-image: url("bg-bienvenida.png");
   background-size: cover;
+  /* animation: opacar 2s infinite alternate; */
 }
 .slide:nth-child(2) .slide__text {
   background-color: rgba(214, 108, 247, 0.8);
+  background: rgb(2,0,36);
+  background: linear-gradient(34deg, rgba(2, 0, 36, 0.534) 0%, rgba(26, 28, 160, 0.555) 55%, rgba(1, 109, 131, 0.582) 100%);
+  
 }
+
+/* 3----------------- */
 
 .slide:nth-child(3) {
   left: 200%;
@@ -127,12 +136,15 @@ header {
   left: 200%;
   background-image: url("bg-evento.png");
   opacity: .3;
-  mix-blend-mode: color-burn;
+  /* animation: opacar 2s infinite alternate; */
 }
 .slide:nth-child(3) .slide__text {
   background: rgb(2,0,36);
-background: linear-gradient(34deg, rgba(2,0,36,0.3430322812718838) 0%, rgba(82,9,121,0.31502107679009106) 35%, rgba(0,212,255,0.30101547454919464) 100%);
+background: linear-gradient(34deg, rgba(2, 0, 36, 0.534) 0%, rgba(26, 28, 160, 0.555) 55%, rgba(1, 109, 131, 0.582) 100%);
+
 }
+
+/* 4----------------- */
 
 .slide:nth-child(4) {
   left: 300%;
@@ -145,6 +157,8 @@ background: linear-gradient(34deg, rgba(2,0,36,0.3430322812718838) 0%, rgba(82,9
   background-color: rgba(214, 108, 247, 0.8);
 }
 
+/* 5----------------- */
+
 .slide:nth-child(5) {
   left: 400%;
 }
@@ -156,6 +170,8 @@ background: linear-gradient(34deg, rgba(2,0,36,0.3430322812718838) 0%, rgba(82,9
   background-color: rgba(214, 108, 247, 0.8);
 }
 
+/* --------------------------------------- */
+
 .slide__text {
   width: 100%;
   height: 100%;
@@ -165,35 +181,41 @@ background: linear-gradient(34deg, rgba(2,0,36,0.3430322812718838) 0%, rgba(82,9
   padding: 1.4rem;
 }
 
+/* --------------------------------------- */
+
 #remark {
   font-size: 7vw;
   display: block;
-  text-align: center;
+  /* text-align: center; */
   position: relitive;
-  color: rgba(255, 81, 0, 0.582);
+  color: rgba(255, 255, 255, 0.993);
   padding: 1rem;
   font-family: 'Suez One', serif;
-}
-
-@keyframes opacar {
-  to {
-    text-shadow: -5px 0px #0000009d;
-  }
 }
 
 #mensaje {
   position: relative;
   display: grid;
-  text-align: center;
-  text-justify:inter-cluster;
+  text-align: left;
+  text-justify:auto;
   font-size:3.5vmin;
-  text-shadow: 3px 3px #633aa515;
+  /* text-shadow: 3px 3px #00000015; */
+  padding: 2rem;
 }
 
 #aviso {
-  place-items: center;
   position: absolute;
   padding-top: 4rem;
-  width: 95%;
-  color: rgba(26, 28, 134, 0.685);
+  padding-left: 50px;
+  width: 80%;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes opacar {
+  from {
+    opacity: .3;
+  }
+  to {
+    opacity: .4;
+  }
 }
