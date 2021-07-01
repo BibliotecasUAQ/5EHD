@@ -105,8 +105,12 @@ header {
 }
 .slide:nth-child(1) .slide__bg {
   left: 0;
+  display: grid;
+  align-self: center;
   background-image: url("bg-bienvenida.png");
-  background-size:contain;
+  background-size: 78%;
+  background-repeat: no-repeat;
+  background-position:top;
 }
 
 /* 2----------------- */
@@ -118,7 +122,7 @@ header {
   left: 100%;
   background-image: url("bg-bienvenida.png");
   background-size: cover;
-  /* animation: opacar 2s infinite alternate; */
+  animation: opacar 2s infinite alternate;
 }
 .slide:nth-child(2) .slide__text {
   background-color: rgba(214, 108, 247, 0.8);
