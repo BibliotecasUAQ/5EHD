@@ -78,7 +78,7 @@ $(document).ready(function() {
       $(".slide-4").addClass("active");
     }
     window.clearTimeout(autoSlideTimeout);
-    $slider.css("transform", "translate3d(-400%, 0, -1rem)");
+    $slider.css("transform", "translateX(-400%)");
     $slideBGs.css("transform", "translateX(-400%)");
   }
   $(document).on("click", ".cambio4", function() {
