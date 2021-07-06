@@ -26,9 +26,11 @@ header {
   display: flex;
   justify-content:center;
   align-items: center;
-  padding: 0;
-  background: rgb(0, 0, 0);
-  font-size: 2rem;
+  padding: 1rem;
+  background: rgb(209, 211, 245);
+  /* background: rgb(217,255,207);
+  background: linear-gradient(128deg, rgba(217,255,207,0.7519958667060574) 0%, rgba(249,175,196,0.4186625333727241) 27%, rgba(255,209,241,0.6483544101234244) 42%, rgba(202,233,255,0.737990264465161) 63%, rgba(255,253,205,0.8052171552214635) 82%, rgba(228,179,255,1) 100%); */
+font-size: 250%;
   font-family: 'Suez One', serif;
 }
 
@@ -44,15 +46,39 @@ header {
 .nav__links li a{
   transition: all 0.3s ease 0s;
   text-decoration: none;
-  color: rgb(248, 248, 248);
+  color: rgb(75, 70, 70);
+  text-shadow: 1px 1px 0px rgba(2, 1, 2, 0.507);
 }
 
 .nav__links li a:hover{
-  color: rgb(91, 163, 235);
+  color: rgb(235, 93, 211);
 }
 
 .logo__link {
-  color: rgba(247, 51, 51, 0.884) !important;
+  color: rgb(253, 91, 91) !important;
+}
+
+.logo__red {
+  /* display:inline-block; */
+  position: absolute;
+  align-content: left;
+  padding: 10px 0px 10px 30px;
+  /* width: 10rem; */
+  z-index: 600;
+}
+
+
+/* --------------------------------------- */
+
+@media all and (max-width: 600px) {
+  header {
+    font-size: 140%;
+  }
+
+  .logo__red {
+    width: 8rem;
+  }
+
 }
 
 /* --------------------------------------- */
@@ -88,6 +114,13 @@ header {
   opacity: 1;
   transform: translateX(0%);
 }
+
+.slide.active .slide__text__init {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+
 .slide__bg {
   position: absolute;
   top: -30px;
@@ -98,19 +131,13 @@ header {
   opacity: 1;
 }
 
-/* 1--------------------------------------- */
-
 .slide:nth-child(1) {
-  left: 0;
+  left: 0%;
 }
 .slide:nth-child(1) .slide__bg {
-  left: 0;
-  display: grid;
-  align-self: center;
-  background-image: url("bg-bienvenida.png");
-  background-size: 78%;
-  background-repeat: no-repeat;
-  background-position:top;
+  left: 0%;
+  background-size: cover;
+  background-color: rgb(173, 23, 148);
 }
 
 /* 2----------------- */
@@ -120,15 +147,10 @@ header {
 }
 .slide:nth-child(2) .slide__bg {
   left: 100%;
-  background-image: url("bg-bienvenida.png");
-  background-size: cover;
-  animation: opacar 2s infinite alternate;
+  background-image: url("bg-convocatoria.png");
 }
 .slide:nth-child(2) .slide__text {
-  background-color: rgba(214, 108, 247, 0.8);
-  background: rgb(2,0,36);
-  background: linear-gradient(34deg, rgba(2, 0, 36, 0.534) 0%, rgba(26, 28, 160, 0.555) 55%, rgba(1, 109, 131, 0.582) 100%);
-  
+  background-color: rgba(173, 23, 148, 0.9);
 }
 
 /* 3----------------- */
@@ -138,40 +160,10 @@ header {
 }
 .slide:nth-child(3) .slide__bg {
   left: 200%;
-  background-image: url("bg-evento.png");
-  opacity: .3;
-  /* animation: opacar 2s infinite alternate; */
-}
-.slide:nth-child(3) .slide__text {
-  background: rgb(2,0,36);
-background: linear-gradient(34deg, rgba(2, 0, 36, 0.534) 0%, rgba(26, 28, 160, 0.555) 55%, rgba(1, 109, 131, 0.582) 100%);
-
-}
-
-/* 4----------------- */
-
-.slide:nth-child(4) {
-  left: 300%;
-}
-.slide:nth-child(4) .slide__bg {
-  left: 300%;
-  background-image: url("bg-convocatoria.png");
-}
-.slide:nth-child(4) .slide__text {
-  background-color: rgba(214, 108, 247, 0.8);
-}
-
-/* 5----------------- */
-
-.slide:nth-child(5) {
-  left: 400%;
-}
-.slide:nth-child(5) .slide__bg {
-  left: 400%;
   background-image: url("bg-contacto.png");
 }
-.slide:nth-child(5) .slide__text {
-  background-color: rgba(214, 108, 247, 0.8);
+.slide:nth-child(3) .slide__text {
+  background-color: rgba(173, 23, 148, 0.9);
 }
 
 /* --------------------------------------- */
@@ -195,6 +187,7 @@ background: linear-gradient(34deg, rgba(2, 0, 36, 0.534) 0%, rgba(26, 28, 160, 0
   color: rgba(255, 255, 255, 0.993);
   padding: 1rem;
   font-family: 'Suez One', serif;
+  text-shadow: -3px -3px 0px black, 0px 0px 5px black;
 }
 
 #mensaje {
@@ -207,12 +200,30 @@ background: linear-gradient(34deg, rgba(2, 0, 36, 0.534) 0%, rgba(26, 28, 160, 0
   padding: 2rem;
 }
 
+::selection {
+  color: rgb(188, 0, 245);
+  background-color: rgba(255, 0, 0, 0);
+  text-shadow: -5px -5px 3px black, 0px 0px 5px black;
+}
+
+
 #aviso {
   position: absolute;
   padding-top: 4rem;
   padding-left: 50px;
   width: 80%;
   color: rgb(255, 255, 255);
+}
+
+#link__styled {
+  color: aqua;
+  text-decoration: none;
+  font-size:4vmin;
+}
+
+#link__styled:hover {
+  color: rgba(0, 255, 255, 0.733);
+  text-shadow: 0px 0px 7px #222121;
 }
 
 @keyframes opacar {
