@@ -24,13 +24,13 @@ body {
 
 header {
   display: flex;
-  justify-content:right;
+  justify-content:flex-end;
   align-items:flex-end;
   padding: 1rem 5% 1rem 1rem;
   background: rgb(209, 211, 245);
   /* background: rgb(217,255,207);
   background: linear-gradient(128deg, rgba(217,255,207,0.7519958667060574) 0%, rgba(249,175,196,0.4186625333727241) 27%, rgba(255,209,241,0.6483544101234244) 42%, rgba(202,233,255,0.737990264465161) 63%, rgba(255,253,205,0.8052171552214635) 82%, rgba(228,179,255,1) 100%); */
-font-size: 250%;
+  font-size: 250%;
   font-family: 'Suez One', serif;
 }
 
