@@ -189,17 +189,16 @@ header {
   color: rgba(190, 150, 241, 0.993);
   padding: 10px 0px 20px 0px;
   font-family: 'Suez One', serif;
-  text-shadow: -1px -1px 0px black, 1px 1px 0px black;
+  text-shadow: -1px -1px 1px black, 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
 }
 
 #mensaje {
   position: relative;
   display: grid;
-  text-align: left;
+  text-align:justify;
   text-justify:auto;
-  font-size:3.5vmin;
+  font-size:3vmin;
   /* text-shadow: 3px 3px #00000015; */
-  padding: 2rem;
 }
 
 ::selection {
@@ -211,9 +210,8 @@ header {
 
 #aviso {
   position: absolute;
-  padding-top: 4rem;
-  padding-left: 50px;
-  width: 80%;
+  padding: 5%;
+  width: 100%;
   color: rgb(86, 56, 92);
 }
 
