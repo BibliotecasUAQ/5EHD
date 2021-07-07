@@ -73,6 +73,8 @@ font-size: 250%;
 @media all and (max-width: 600px) {
   header {
     font-size: 120%;
+    justify-content:right;
+    align-items: right;
   }
 
   .logo__red {
