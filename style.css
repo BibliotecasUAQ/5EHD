@@ -72,7 +72,7 @@ font-size: 250%;
 
 @media all and (max-width: 600px) {
   header {
-    font-size: 140%;
+    font-size: 120%;
   }
 
   .logo__red {
