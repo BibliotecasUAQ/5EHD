@@ -139,7 +139,7 @@ header {
 .slide:nth-child(1) .slide__bg {
   left: 0%;
   background-size: cover;
-  background-color: rgb(185, 106, 159);
+  background-color: rgb(255, 202, 237);
 }
 
 /* 2----------------- */
@@ -152,7 +152,7 @@ header {
   background-image: url("bg-convocatoria.png");
 }
 .slide:nth-child(2) .slide__text {
-  background-color: rgba(173, 23, 148, 0.9);
+  background-color: rgb(255, 202, 237, .9);
 }
 
 /* 3----------------- */
@@ -165,7 +165,7 @@ header {
   background-image: url("bg-contacto.png");
 }
 .slide:nth-child(3) .slide__text {
-  background-color: rgba(173, 23, 148, 0.9);
+  background-color: rgb(255, 202, 237, .9);
 }
 
 /* --------------------------------------- */
@@ -182,14 +182,14 @@ header {
 /* --------------------------------------- */
 
 #remark {
-  font-size: 7vw;
+  font-size:5vmin;
   display: block;
   /* text-align: center; */
   position: relitive;
-  color: rgba(255, 255, 255, 0.993);
-  padding: 1rem;
+  color: rgba(190, 150, 241, 0.993);
+  padding: 10px 0px 20px 0px;
   font-family: 'Suez One', serif;
-  text-shadow: -3px -3px 0px black, 0px 0px 5px black;
+  text-shadow: -1px -1px 0px black, 1px 1px 0px black;
 }
 
 #mensaje {
@@ -203,9 +203,9 @@ header {
 }
 
 ::selection {
-  color: rgb(188, 0, 245);
+  color: rgba(188, 0, 245, 0.479);
   background-color: rgba(255, 0, 0, 0);
-  text-shadow: -5px -5px 3px black, 0px 0px 5px black;
+  text-shadow: -2px -2px 1px black, 0px 0px 5px black;
 }
 
 
@@ -214,7 +214,7 @@ header {
   padding-top: 4rem;
   padding-left: 50px;
   width: 80%;
-  color: rgb(255, 255, 255);
+  color: rgb(86, 56, 92);
 }
 
 #link__styled {
